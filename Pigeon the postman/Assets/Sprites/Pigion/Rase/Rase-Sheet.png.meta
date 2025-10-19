@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: f86af5e9440967f4895e3f625195f5db
+guid: cb4c564174fa228469a66284abd79827
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6915943623817992098
-    second: DovecoteAll_0
+      213: 8944421968240670580
+    second: Rase-Sheet_0
+  - first:
+      213: 1944129648996101595
+    second: Rase-Sheet_1
+  - first:
+      213: 5525261985308659472
+    second: Rase-Sheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DovecoteAll_0
+      name: Rase-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 227
-        height: 115
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5863b79ae1a500a0800000000000000
-      internalID: -6915943623817992098
+      spriteID: 4777f2af368f02c70800000000000000
+      internalID: 8944421968240670580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rase-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdda7b58d9feafa10800000000000000
+      internalID: 1944129648996101595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rase-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01fca45608cadac40800000000000000
+      internalID: 5525261985308659472
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 2a3cc52f8f0478a4e9dc6e5cee70a86e
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DovecoteAll_0: -6915943623817992098
+      Rase-Sheet_0: 8944421968240670580
+      Rase-Sheet_1: 1944129648996101595
+      Rase-Sheet_2: 5525261985308659472
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

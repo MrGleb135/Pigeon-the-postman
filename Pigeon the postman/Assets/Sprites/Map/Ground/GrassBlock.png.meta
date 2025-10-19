@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 29cae6e0162366f438d9eb16a3e21215
+guid: 05d77b8697aa1bc47b28a69445d75f9f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1623759601925717754
-    second: GrassBlock_0
+      213: 7026662300512407121
+    second: GrassBlock 1_0
   - first:
-      213: -2505356322390288542
-    second: GrassBlock_1
+      213: -7213868148167172796
+    second: GrassBlock 1_1
   - first:
-      213: 1338265983515092804
-    second: GrassBlock_2
+      213: 5380041224505748688
+    second: GrassBlock 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,10 +119,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 601869ebe3f3779e0800000000000000
-      internalID: -1623759601925717754
+      spriteID: 5c2b62e2ab710cb44a534d3db88510e8
+      internalID: 737072404
       vertices: []
       indices: 
       edges: []
@@ -141,10 +141,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 267d520e2bf2b3dd0800000000000000
-      internalID: -2505356322390288542
+      spriteID: fde7618acf5726e4e9bee3d108aa5a9a
+      internalID: -162036647
       vertices: []
       indices: 
       edges: []
@@ -163,10 +163,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 447e76252d9729210800000000000000
-      internalID: 1338265983515092804
+      spriteID: d23bac65f60e5814ab65e2ba30a2c3c0
+      internalID: 390090183
       vertices: []
       indices: 
       edges: []
@@ -175,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: eab4bf481e313074e8f77d13234c62d0
+    spriteID: e1afba938ca84184dab8d6a1c0abd06e
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GrassBlock_0: -1623759601925717754
-      GrassBlock_1: -2505356322390288542
-      GrassBlock_2: 1338265983515092804
+      GrassBlock_0: 737072404
+      GrassBlock_1: -162036647
+      GrassBlock_2: 390090183
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: f86af5e9440967f4895e3f625195f5db
+guid: e52af966e0800274c98f513fae292ae3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6915943623817992098
-    second: DovecoteAll_0
+      213: 3084398757302831344
+    second: Pecking-Sheet_0
+  - first:
+      213: 5303137821393380431
+    second: Pecking-Sheet_1
+  - first:
+      213: 4602860684945941257
+    second: Pecking-Sheet_2
+  - first:
+      213: -6376363643117618818
+    second: Pecking-Sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DovecoteAll_0
+      name: Pecking-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 227
-        height: 115
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5863b79ae1a500a0800000000000000
-      internalID: -6915943623817992098
+      spriteID: 0f801b2f35cfdca20800000000000000
+      internalID: 3084398757302831344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pecking-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44671750c7889940800000000000000
+      internalID: 5303137821393380431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pecking-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90360dce765a0ef30800000000000000
+      internalID: 4602860684945941257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pecking-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e79324dcc0b9287a0800000000000000
+      internalID: -6376363643117618818
       vertices: []
       indices: 
       edges: []
@@ -125,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 9afde9dc574ef114ea8ca6d4c14266a8
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DovecoteAll_0: -6915943623817992098
+      Pecking-Sheet_0: 3084398757302831344
+      Pecking-Sheet_1: 5303137821393380431
+      Pecking-Sheet_2: 4602860684945941257
+      Pecking-Sheet_3: -6376363643117618818
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
