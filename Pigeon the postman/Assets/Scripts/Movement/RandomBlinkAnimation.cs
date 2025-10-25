@@ -29,7 +29,6 @@ public class RandomBlinkAnimation : MonoBehaviour
                 isBlinking = false;
                 previousLoopCount = -1;
             }
-
             return;
         }
         
@@ -45,7 +44,7 @@ public class RandomBlinkAnimation : MonoBehaviour
                 }
                 previousLoopCount = currentLoopCount;
             }
-
+            
             if (idleCounter >= nextBlinkAfter)
             {
                 anim.SetBool("RandomBlink", true);
