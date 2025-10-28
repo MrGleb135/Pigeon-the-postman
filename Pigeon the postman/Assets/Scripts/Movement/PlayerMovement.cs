@@ -35,10 +35,11 @@ public class PlayerMovement : MonoBehaviour
             if(isGrounded)
             {
                 anim.SetBool("RaceAnim", true);
+                //anim.Play("PigionRaceAnimation");
                 isRace = true;
             }
             else
-            {   
+            {
                 anim.SetBool("FlapAnim", true);
                 isFlap = true;
             }
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
             if (state.IsName("PigionRaceAnimation") && state.normalizedTime >= 1f)
             {
                 anim.SetBool("RaceAnim", false);
+                anim.SetBool("FlyAnim", true);
                 isRace = false;
             }
         }
@@ -58,15 +60,16 @@ public class PlayerMovement : MonoBehaviour
             if (state.IsName("PigionWingsFlapAnimation") && state.normalizedTime >= 1f)
             {
                 anim.SetBool("FlapAnim", false);
+                anim.SetBool("FlyAnim", true);
                 isFlap = false;
             }
         }
 
-        if (!isGrounded)
+        if ((!isGrounded) && (!isRace) && (!isFlap))
         {
             anim.SetBool("FlyAnim", true);
         }
-        if (isGrounded)
+        else
         {
             anim.SetBool("FlyAnim", false);
         }
