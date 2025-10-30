@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 1f;
     public float jumpForce = 5f;
+    //public float maxFallSpeed = 10f;
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
@@ -29,6 +30,14 @@ public class PlayerMovement : MonoBehaviour
 
         AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
         bool isGrounded = OnGround.OnGround;
+/*
+        Vector2 velocity = rb.velocity;
+        if (Mathf.Abs(velocity.y) > maxFallSpeed)
+        {
+            velocity.y = Mathf.Sign(velocity.y) * maxFallSpeed;
+        }
+        rb.velocity = velocity;
+*/
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
