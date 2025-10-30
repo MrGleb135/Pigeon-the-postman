@@ -8,8 +8,8 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer sr;
     Animator anim;
 
-    bool isRace = false;
-    bool isFlap = false;
+    public bool isRace = false;
+    public bool isFlap = false;
 
     public OnGroundCheck OnGround;
 
@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
             if(isGrounded)
             {
                 anim.SetBool("RaceAnim", true);
-                //anim.Play("PigionRaceAnimation");
                 isRace = true;
             }
             else
@@ -45,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
             }
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
-        
+
         if (isRace) 
         {
             if (state.IsName("PigionRaceAnimation") && state.normalizedTime >= 1f)
