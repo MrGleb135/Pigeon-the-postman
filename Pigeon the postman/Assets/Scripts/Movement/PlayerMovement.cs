@@ -8,8 +8,8 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer sr;
     Animator anim;
 
-    public bool isRace = false;
-    public bool isFlap = false;
+    bool isRace = false;
+    bool isFlap = false;
 
     public OnGroundCheck OnGround;
 
@@ -34,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if(isGrounded)
             {
-                anim.SetBool("RaceAnim", true);
+                //anim.SetBool("RaceAnim", true);
+                anim.SetTrigger("RaceAnimTrigger");
                 isRace = true;
             }
             else
@@ -44,7 +45,15 @@ public class PlayerMovement : MonoBehaviour
             }
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
-
+        
+        if (state.IsName("PigionRaceAnimation"))
+        {
+            if (state.normalizedTime >= 1f)
+            {
+                isRace = false;
+            }
+        }
+/*
         if (isRace) 
         {
             if (state.IsName("PigionRaceAnimation") && state.normalizedTime >= 1f)
@@ -54,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
                 isRace = false;
             }
         }
+*/
         if (isFlap)
         {
             if (state.IsName("PigionWingsFlapAnimation") && state.normalizedTime >= 1f)
