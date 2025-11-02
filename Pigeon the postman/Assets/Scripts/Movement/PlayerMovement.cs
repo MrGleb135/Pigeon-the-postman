@@ -4,7 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 1f;
     public float jumpForce = 5f;
-    //public float maxFallSpeed = 10f;
+    public float maxUpSpeed = 10f;
+    public float maxFallSpeed = -3f;
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
@@ -30,24 +31,29 @@ public class PlayerMovement : MonoBehaviour
 
         AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
         bool isGrounded = OnGround.OnGround;
-/*
-        Vector2 velocity = rb.velocity;
-        if (Mathf.Abs(velocity.y) > maxFallSpeed)
+
+        Vector2 velocity = rb.linearVelocity;
+        if (velocity.y > maxUpSpeed)
         {
-            velocity.y = Mathf.Sign(velocity.y) * maxFallSpeed;
+            velocity.y = maxUpSpeed;
         }
-        rb.velocity = velocity;
-*/
+        if (velocity.y < maxFallSpeed)
+        {
+            velocity.y = maxFallSpeed;
+        }
+        rb.linearVelocity = velocity;
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(isGrounded)
+            if (isGrounded && !isRace && !state.IsName("PigionRaceAnimation"))
             {
                 //anim.SetBool("RaceAnim", true);
+                anim.ResetTrigger("RaceAnimTrigger");
                 anim.SetTrigger("RaceAnimTrigger");
                 isRace = true;
             }
-            else
+            else if (!isGrounded && !isFlap)
             {
                 anim.SetBool("FlapAnim", true);
                 isFlap = true;
@@ -55,12 +61,10 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
         
-        if (state.IsName("PigionRaceAnimation"))
+        if (isRace && state.IsName("PigionRaceAnimation") && state.normalizedTime >= 1f)
         {
-            if (state.normalizedTime >= 1f)
-            {
-                isRace = false;
-            }
+            anim.ResetTrigger("RaceAnimTrigger");
+            isRace = false;
         }
 /*
         if (isRace) 
