@@ -48,9 +48,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isGrounded && !isRace && !state.IsName("PigionRaceAnimation"))
             {
-                //anim.SetBool("RaceAnim", true);
-                anim.ResetTrigger("RaceAnimTrigger");
-                anim.SetTrigger("RaceAnimTrigger");
+                anim.SetBool("RaceAnim", true);
+                //anim.SetTrigger("RaceAnimTrigger");
                 isRace = true;
             }
             else if (!isGrounded && !isFlap)
@@ -60,13 +59,14 @@ public class PlayerMovement : MonoBehaviour
             }
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
-        
+/*
         if (isRace && state.IsName("PigionRaceAnimation") && state.normalizedTime >= 1f)
         {
             anim.ResetTrigger("RaceAnimTrigger");
+            anim.SetBool("FlyAnim", true);
             isRace = false;
         }
-/*
+*/
         if (isRace) 
         {
             if (state.IsName("PigionRaceAnimation") && state.normalizedTime >= 1f)
@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
                 isRace = false;
             }
         }
-*/
+
         if (isFlap)
         {
             if (state.IsName("PigionWingsFlapAnimation") && state.normalizedTime >= 1f)

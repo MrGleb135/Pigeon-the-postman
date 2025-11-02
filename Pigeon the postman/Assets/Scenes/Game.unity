@@ -1991,6 +1991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   jumpForce: 5
+  maxUpSpeed: 10
   maxFallSpeed: -3
   OnGround: {fileID: 1504887564}
 --- !u!114 &1504887563
