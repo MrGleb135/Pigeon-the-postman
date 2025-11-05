@@ -1,11 +1,15 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 1f;
+    public float speedInAir = 5f;   
     public float jumpForce = 5f;
     public float maxUpSpeed = 10f;
     public float maxFallSpeed = -3f;
+    public float characterTilt = 0f;
+
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
@@ -23,14 +27,42 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
+        bool isGrounded = OnGround.OnGround;
+
         float movement = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(movement, 0, 0) * speed * Time.deltaTime;
+        if (!isGrounded)
+        {
+            float turn = sr.flipX ? -1f : 1f;
+            transform.position += new Vector3(turn, 0, 0) * speedInAir * Time.deltaTime;
+        }
+        else
+        {
+            transform.position += new Vector3(movement, 0, 0) * speed * Time.deltaTime;
+        }
+        
 
         bool IsMove = Mathf.Abs(movement) > 0.01f;
         anim.SetBool("IsMove", IsMove);
 
-        AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
-        bool isGrounded = OnGround.OnGround;
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        {
+            maxFallSpeed = -15f;
+            if(!isGrounded)
+            {
+                characterTilt = sr.flipX ? 30f : -30f;
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
+        {
+            maxFallSpeed = -3f;
+            characterTilt = 0f;
+        }
+        if (isGrounded)
+        {
+            characterTilt = 0f;
+        }
+        transform.localEulerAngles = new Vector3(0, 0, characterTilt);
 
         Vector2 velocity = rb.linearVelocity;
         if (velocity.y > maxUpSpeed)
@@ -49,7 +81,6 @@ public class PlayerMovement : MonoBehaviour
             if (isGrounded && !isRace && !state.IsName("PigionRaceAnimation"))
             {
                 anim.SetBool("RaceAnim", true);
-                //anim.SetTrigger("RaceAnimTrigger");
                 isRace = true;
             }
             else if (!isGrounded && !isFlap)
@@ -59,14 +90,7 @@ public class PlayerMovement : MonoBehaviour
             }
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
-/*
-        if (isRace && state.IsName("PigionRaceAnimation") && state.normalizedTime >= 1f)
-        {
-            anim.ResetTrigger("RaceAnimTrigger");
-            anim.SetBool("FlyAnim", true);
-            isRace = false;
-        }
-*/
+
         if (isRace) 
         {
             if (state.IsName("PigionRaceAnimation") && state.normalizedTime >= 1f)

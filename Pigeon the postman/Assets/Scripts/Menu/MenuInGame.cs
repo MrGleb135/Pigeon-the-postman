@@ -3,7 +3,7 @@ using UnityEngine;
 public class MenuInGame : MonoBehaviour
 {
     public GameObject MIG;
-    private bool act;
+    private bool active;
     void Start()
     {
         MIG.SetActive(false);
@@ -12,15 +12,15 @@ public class MenuInGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!act)
+            if (!active)
             {
                 MIG.SetActive(true);
-                act = true;
+                active = true;
             }
             else
             {
                 MIG.SetActive(false);
-                act = false;
+                active = false;
             }
         }
     }

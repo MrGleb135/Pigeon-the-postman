@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f5b0402dd7d07f849af097fb0e3ec667
+guid: ef94f81320cd52245a27063a38394d5f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4817395580123167460
-    second: DovecoteAll 1_0
+      213: 1979745847003030090
+    second: MenuInGame_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DovecoteAll 1_0
+      name: MenuInGame_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 227
-        height: 115
+        width: 80
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c15c8385e3c252db0800000000000000
-      internalID: -4817395580123167460
+      spriteID: a42ab24db58797b10800000000000000
+      internalID: 1979745847003030090
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DovecoteAll 1_0: -4817395580123167460
+      MenuInGame_0: 1979745847003030090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
