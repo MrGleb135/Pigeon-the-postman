@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         bool IsMove = Mathf.Abs(movement) > 0.01f;
         anim.SetBool("IsMove", IsMove);
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
             maxFallSpeed = -15f;
             if(!isGrounded)

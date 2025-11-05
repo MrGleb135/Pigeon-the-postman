@@ -8,7 +8,7 @@ public class OnGroundCheck : MonoBehaviour
     private Coroutine offGroundCoroutine;
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         OnGround = true;
         if (offGroundCoroutine != null)
@@ -18,7 +18,7 @@ public class OnGroundCheck : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (offGroundCoroutine == null)
         {
