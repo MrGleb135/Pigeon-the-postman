@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     bool isFlap = false;
 
     public OnGroundCheck OnGround;
+    public EnergyCount energyCount;
 
     void Start()
     {
@@ -29,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     {
         AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
         bool isGrounded = OnGround.OnGround;
+
+        int energy = energyCount.energy;
 
         float movement = Input.GetAxis("Horizontal");
         if (!isGrounded)
@@ -75,8 +78,7 @@ public class PlayerMovement : MonoBehaviour
         }
         rb.linearVelocity = velocity;
 
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && energy > 0)
         {
             if (isGrounded && !isRace && !state.IsName("PigionRaceAnimation"))
             {
@@ -88,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetBool("FlapAnim", true);
                 isFlap = true;
             }
+            energyCount.energy = energyCount.energy - 10;
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
 
