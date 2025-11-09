@@ -1801,6 +1801,8 @@ GameObject:
   - component: {fileID: 1504887563}
   - component: {fileID: 1504887564}
   - component: {fileID: 1504887565}
+  - component: {fileID: 1504887567}
+  - component: {fileID: 1504887566}
   m_Layer: 0
   m_Name: Pigion
   m_TagString: Untagged
@@ -1963,7 +1965,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.037435956, y: -0.0749198}
-  m_Size: {x: 0.6499182, y: 0.8461384}
+  m_Size: {x: 0.65, y: 0.83}
   m_Direction: 0
 --- !u!114 &1504887562
 MonoBehaviour:
@@ -2024,7 +2026,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxEnergy: 100
   energy: 0
-  OnGround: {fileID: 0}
+  OnGround: {fileID: 2041592421}
+--- !u!114 &1504887566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504887556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c00d4f84efe16c4ca772796c28b8d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAdrenaline: 0
+  adrenaline: 0
+--- !u!114 &1504887567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504887556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2013ffa323b93174f82ef77bafb9862a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLetters: 1
+  letters: 0
 --- !u!1 &1899601006
 GameObject:
   m_ObjectHideFlags: 0
