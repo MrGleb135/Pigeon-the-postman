@@ -1,10 +1,13 @@
 using System.Collections;
+using Unity.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnergyCount : MonoBehaviour
 {
     public int maxEnergy = 100;
     public int energy;
+    public Image EnergyScale;
 
     public OnGroundCheck OnGround;
 
@@ -15,7 +18,7 @@ public class EnergyCount : MonoBehaviour
         energy = maxEnergy;
     }
 
- void Update()
+    void Update()
     {
         bool isGrounded = OnGround.OnGround;
 
@@ -28,6 +31,8 @@ public class EnergyCount : MonoBehaviour
             StopCoroutine(energyCoroutine);
             energyCoroutine = null;
         }
+
+        EnergyScale.fillAmount = ((1/(float)maxEnergy)*(float)energy);
     }
 
     private IEnumerator WaitForEnergy()
