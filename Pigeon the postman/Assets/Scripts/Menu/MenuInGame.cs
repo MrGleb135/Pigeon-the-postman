@@ -24,4 +24,9 @@ public class MenuInGame : MonoBehaviour
             }
         }
     }
+    public void ButtonContinue()
+    {
+        MIG.SetActive(false);
+        active = false;
+    }
 }

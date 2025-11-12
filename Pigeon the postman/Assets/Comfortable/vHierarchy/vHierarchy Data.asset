@@ -45,6 +45,30 @@ MonoBehaviour:
     - goDatas_byGlobalId:
         keys:
         - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-121570933-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-1404061896-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-1899601006-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-367250979-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-1153706107-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-963314811-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-1764770314-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-208932234-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-2140197460-0
         values:
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
