@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     public OnGroundCheck OnGround;
     public EnergyCount energyCount;
+    public CameraUpgread сameraUpgread;
 
     void Start()
     {
@@ -28,104 +29,109 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        bool isUpgreadMenu = сameraUpgread.upgreadMenu;
+
         AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
         bool isGrounded = OnGround.OnGround;
 
         int energy = energyCount.energy;
 
-        float movement = Input.GetAxis("Horizontal");
-        if (!isGrounded)
+        if (!isUpgreadMenu)
         {
-            float turn = sr.flipX ? -1f : 1f;
-            transform.position += new Vector3(turn, 0, 0) * speedInAir * Time.deltaTime;
-        }
-        else
-        {
-            transform.position += new Vector3(movement, 0, 0) * speed * Time.deltaTime;
-        }
-        
-
-        bool IsMove = Mathf.Abs(movement) > 0.01f;
-        anim.SetBool("IsMove", IsMove);
-
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-        {
-            maxFallSpeed = -15f;
-            if(!isGrounded)
+            float movement = Input.GetAxis("Horizontal");
+            if (!isGrounded)
             {
-                characterTilt = sr.flipX ? 30f : -30f;
+                float turn = sr.flipX ? -1f : 1f;
+                transform.position += new Vector3(turn, 0, 0) * speedInAir * Time.deltaTime;
             }
-        }
-        if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
-        {
-            maxFallSpeed = -3f;
-            characterTilt = 0f;
-        }
-        if (isGrounded)
-        {
-            characterTilt = 0f;
-        }
-        transform.localEulerAngles = new Vector3(0, 0, characterTilt);
-
-        Vector2 velocity = rb.linearVelocity;
-        if (velocity.y > maxUpSpeed)
-        {
-            velocity.y = maxUpSpeed;
-        }
-        if (velocity.y < maxFallSpeed)
-        {
-            velocity.y = maxFallSpeed;
-        }
-        rb.linearVelocity = velocity;
-
-        if (Input.GetKeyDown(KeyCode.Space) && energy > 0)
-        {
-            if (isGrounded && !isRace && !state.IsName("PigionRaceAnimation"))
+            else
             {
-                anim.SetBool("RaceAnim", true);
-                isRace = true;
+                transform.position += new Vector3(movement, 0, 0) * speed * Time.deltaTime;
             }
-            else if (!isGrounded && !isFlap)
-            {
-                anim.SetBool("FlapAnim", true);
-                isFlap = true;
-            }
-            energyCount.energy = energyCount.energy - 10;
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-        }
 
-        if (isRace) 
-        {
-            if (state.IsName("PigionRaceAnimation") && state.normalizedTime >= 1f)
+
+            bool IsMove = Mathf.Abs(movement) > 0.01f;
+            anim.SetBool("IsMove", IsMove);
+
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
-                anim.SetBool("RaceAnim", false);
+                maxFallSpeed = -15f;
+                if (!isGrounded)
+                {
+                    characterTilt = sr.flipX ? 30f : -30f;
+                }
+            }
+            if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
+            {
+                maxFallSpeed = -3f;
+                characterTilt = 0f;
+            }
+            if (isGrounded)
+            {
+                characterTilt = 0f;
+            }
+            transform.localEulerAngles = new Vector3(0, 0, characterTilt);
+
+            Vector2 velocity = rb.linearVelocity;
+            if (velocity.y > maxUpSpeed)
+            {
+                velocity.y = maxUpSpeed;
+            }
+            if (velocity.y < maxFallSpeed)
+            {
+                velocity.y = maxFallSpeed;
+            }
+            rb.linearVelocity = velocity;
+
+            if (Input.GetKeyDown(KeyCode.Space) && energy > 0)
+            {
+                if (isGrounded && !isRace && !state.IsName("PigionRaceAnimation"))
+                {
+                    anim.SetBool("RaceAnim", true);
+                    isRace = true;
+                }
+                else if (!isGrounded && !isFlap)
+                {
+                    anim.SetBool("FlapAnim", true);
+                    isFlap = true;
+                }
+                energyCount.energy = energyCount.energy - 10;
+                rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            }
+
+            if (isRace)
+            {
+                if (state.IsName("PigionRaceAnimation") && state.normalizedTime >= 1f)
+                {
+                    anim.SetBool("RaceAnim", false);
+                    anim.SetBool("FlyAnim", true);
+                    isRace = false;
+                }
+            }
+
+            if (isFlap)
+            {
+                if (state.IsName("PigionWingsFlapAnimation") && state.normalizedTime >= 1f)
+                {
+                    anim.SetBool("FlapAnim", false);
+                    anim.SetBool("FlyAnim", true);
+                    isFlap = false;
+                }
+            }
+
+            if ((!isGrounded) && (!isRace) && (!isFlap))
+            {
                 anim.SetBool("FlyAnim", true);
-                isRace = false;
             }
-        }
-
-        if (isFlap)
-        {
-            if (state.IsName("PigionWingsFlapAnimation") && state.normalizedTime >= 1f)
+            else
             {
-                anim.SetBool("FlapAnim", false);
-                anim.SetBool("FlyAnim", true);
-                isFlap = false;
+                anim.SetBool("FlyAnim", false);
             }
-        }
 
-        if ((!isGrounded) && (!isRace) && (!isFlap))
-        {
-            anim.SetBool("FlyAnim", true);
-        }
-        else
-        {
-            anim.SetBool("FlyAnim", false);
-        }
-
-        if (Mathf.Abs(movement) > 0.01f)
-        {
-            sr.flipX = movement < 0;
+            if (Mathf.Abs(movement) > 0.01f)
+            {
+                sr.flipX = movement < 0;
+            }
         }
     }
 }

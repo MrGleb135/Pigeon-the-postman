@@ -10,6 +10,9 @@ public class OnGroundCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("House"))
+            return;
+
         OnGround = true;
         if (offGroundCoroutine != null)
         {
@@ -20,6 +23,9 @@ public class OnGroundCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.CompareTag("House"))
+            return;
+            
         if (offGroundCoroutine == null)
         {
             offGroundCoroutine = StartCoroutine(OffGroundTimer());
