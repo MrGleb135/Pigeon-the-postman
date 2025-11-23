@@ -4,6 +4,7 @@ using UnityEngine;
 public class LettersManager : MonoBehaviour
 {
     public LettersCount lettersCount;
+    public GameObject task;
 
     [Header("Список всех домов")]
     public List<LettersData> houses = new List<LettersData>();
@@ -15,6 +16,7 @@ public class LettersManager : MonoBehaviour
     {
         SelectRandomHouses();
         lettersCount.letters = lettersCount.maxLetters;
+        task.SetActive(true);
     }
 
     public void SelectRandomHouses()

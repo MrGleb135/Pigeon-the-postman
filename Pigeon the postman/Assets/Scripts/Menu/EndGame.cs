@@ -6,6 +6,7 @@ public class EndGame : MonoBehaviour
     public GameObject endMenu;
     public CameraUpgread сameraUpgread;
     public Marcs marcs;
+    public GameObject task;
     
     void Start()
     {
@@ -17,6 +18,8 @@ public class EndGame : MonoBehaviour
         {
             if (lettersCount.letters <= 0)
             {
+                task.SetActive(false);
+                
                 endMenu.SetActive(true);
                 сameraUpgread.upgreadMenu = true;
                 marcs.marcs = marcs.marcs + marcs.marcsSumInARound;
