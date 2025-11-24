@@ -67,7 +67,7 @@ public class AdrenalineUpgread : MonoBehaviour
     }
     public void AdrenalineUpgrad2()
     {
-        if (marcs.marcs >= 5)
+        if (marcs.marcs >= 10)
         {
             adrenalineCount.maxAdrenaline = 2;
             adrenalineCount.adrenaline = adrenalineCount.maxAdrenaline;
@@ -87,7 +87,7 @@ public class AdrenalineUpgread : MonoBehaviour
     }
     public void AdrenalineUpgrad3()
     {
-        if (marcs.marcs >= 5)
+        if (marcs.marcs >= 15)
         {
             adrenalineCount.maxAdrenaline = 3;
             adrenalineCount.adrenaline = adrenalineCount.maxAdrenaline;
@@ -107,7 +107,7 @@ public class AdrenalineUpgread : MonoBehaviour
     }
     public void AdrenalineUpgrad4()
     {
-        if (marcs.marcs >= 5)
+        if (marcs.marcs >= 20)
         {
             adrenalineCount.maxAdrenaline = 4;
             adrenalineCount.adrenaline = adrenalineCount.maxAdrenaline;

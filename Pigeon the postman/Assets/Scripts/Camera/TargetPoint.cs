@@ -58,6 +58,11 @@ public class TargetPoint : MonoBehaviour
             task2.SetActive(false);
 
             FindNearestHouse();
+            if (target == null)
+            {
+                marker.SetActive(false);
+                return;
+            }
             Vector2 targetPosition = target.transform.position;
             if (targetPosition.x > left && targetPosition.x < right && targetPosition.y < top && targetPosition.y > bottom)
             {

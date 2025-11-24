@@ -67,7 +67,7 @@ public class EnergyUpgrad : MonoBehaviour
     }
     public void EnergyUpgrad150()
     {
-        if (marcs.marcs >= 5)
+        if (marcs.marcs >= 10)
         {
             energyCount.maxEnergy = 150;
             energyCount.energy = energyCount.maxEnergy;
@@ -87,7 +87,7 @@ public class EnergyUpgrad : MonoBehaviour
     }   
     public void EnergyUpgrad175()
     {
-        if (marcs.marcs >= 5)
+        if (marcs.marcs >= 15)
         {
             energyCount.maxEnergy = 175;
             energyCount.energy = energyCount.maxEnergy;
@@ -107,7 +107,7 @@ public class EnergyUpgrad : MonoBehaviour
     }
     public void EnergyUpgrad200()
     {
-        if (marcs.marcs >= 5)
+        if (marcs.marcs >= 20)
         {
             energyCount.maxEnergy = 200;
             energyCount.energy = energyCount.maxEnergy;

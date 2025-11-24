@@ -67,7 +67,7 @@ public class LettersUpgread : MonoBehaviour
     }
     public void LettersUpgrad2()
     {
-        if (marcs.marcs >= 5)
+        if (marcs.marcs >= 10)
         {
             lettersCount.maxLetters = 3;
             lettersCount.letters = lettersCount.maxLetters;
@@ -87,7 +87,7 @@ public class LettersUpgread : MonoBehaviour
     }
     public void LettersUpgrad3()
     {
-        if (marcs.marcs >= 5)
+        if (marcs.marcs >= 15)
         {
             lettersCount.maxLetters = 4;
             lettersCount.letters = lettersCount.maxLetters;
@@ -107,7 +107,7 @@ public class LettersUpgread : MonoBehaviour
     }
     public void LettersUpgrad4()
     {
-        if (marcs.marcs >= 5)
+        if (marcs.marcs >= 20)
         {
             lettersCount.maxLetters = 5;
             lettersCount.letters = lettersCount.maxLetters;
