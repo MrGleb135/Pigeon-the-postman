@@ -53,9 +53,36 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-1764770314-0
         - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-208932234-0
         - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-2140197460-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-852590517-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-167625656-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-474572780-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-420935100-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-1431733924-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-626821157-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-1147033004-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-482658118-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-648010657-0
         values:
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: Terrain Icon
         - colorIndex: 0
           iconNameOrGuid: Terrain Icon
         - colorIndex: 0
