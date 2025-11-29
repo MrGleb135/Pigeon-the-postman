@@ -405,6 +405,7 @@ MonoBehaviour:
   speedInAir: 3
   jumpForce: 0.05
   IsMove: 0
+  direction: 0
   player: {fileID: 1504887556}
   onGroundCheck: {fileID: 586706450}
   visionZone: {fileID: 533575377}
@@ -442,7 +443,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: 0, y: -0.17}
   m_Size: {x: 1, y: 0.65}
   m_Direction: 1
 --- !u!50 &19213738
@@ -2229,7 +2230,7 @@ GameObject:
   - component: {fileID: 167625659}
   m_Layer: 0
   m_Name: GreenHouse3
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3224,7 +3225,7 @@ GameObject:
   - component: {fileID: 367250982}
   m_Layer: 0
   m_Name: RedHouse1
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3711,6 +3712,7 @@ MonoBehaviour:
   tasks: {fileID: 210085781}
   "\u0441ameraUpgread": {fileID: 121570939}
   cameraFollower: {fileID: 121570938}
+  catMovement: {fileID: 478965782}
 --- !u!61 &414496324
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3825,7 +3827,7 @@ GameObject:
   - component: {fileID: 420935103}
   m_Layer: 0
   m_Name: YellowHouse3
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4779,7 +4781,7 @@ GameObject:
   - component: {fileID: 474572783}
   m_Layer: 0
   m_Name: BlueHouse2
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4971,6 +4973,7 @@ MonoBehaviour:
   speedInAir: 3
   jumpForce: 0.05
   IsMove: 0
+  direction: 0
   player: {fileID: 1504887556}
   onGroundCheck: {fileID: 1652231113}
   visionZone: {fileID: 1690868608}
@@ -5008,7 +5011,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: 0, y: -0.17}
   m_Size: {x: 1, y: 0.65}
   m_Direction: 1
 --- !u!50 &478965784
@@ -5147,7 +5150,7 @@ GameObject:
   - component: {fileID: 482658121}
   m_Layer: 0
   m_Name: RedHouse2
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6029,6 +6032,7 @@ MonoBehaviour:
   speedInAir: 3
   jumpForce: 0.05
   IsMove: 0
+  direction: 0
   player: {fileID: 1504887556}
   onGroundCheck: {fileID: 12001588}
   visionZone: {fileID: 1932222016}
@@ -6066,7 +6070,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: 0, y: -0.17}
   m_Size: {x: 1, y: 0.65}
   m_Direction: 1
 --- !u!50 &551742786
@@ -6296,6 +6300,7 @@ MonoBehaviour:
   speedInAir: 3
   jumpForce: 0.05
   IsMove: 0
+  direction: 0
   player: {fileID: 1504887556}
   onGroundCheck: {fileID: 1113294256}
   visionZone: {fileID: 2118538844}
@@ -6333,7 +6338,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: 0, y: -0.17}
   m_Size: {x: 1, y: 0.65}
   m_Direction: 1
 --- !u!50 &580470778
@@ -6742,6 +6747,7 @@ MonoBehaviour:
   speedInAir: 3
   jumpForce: 0.05
   IsMove: 0
+  direction: 0
   player: {fileID: 1504887556}
   onGroundCheck: {fileID: 140761886}
   visionZone: {fileID: 1206676358}
@@ -6779,7 +6785,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: 0, y: -0.17}
   m_Size: {x: 1, y: 0.65}
   m_Direction: 1
 --- !u!50 &612623189
@@ -6835,7 +6841,7 @@ GameObject:
   - component: {fileID: 626821160}
   m_Layer: 0
   m_Name: BlueHouse3
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7128,7 +7134,7 @@ GameObject:
   - component: {fileID: 648010660}
   m_Layer: 0
   m_Name: YellowHouse2
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7953,6 +7959,7 @@ MonoBehaviour:
   tasks: {fileID: 210085781}
   "\u0441ameraUpgread": {fileID: 121570939}
   cameraFollower: {fileID: 121570938}
+  catMovement: {fileID: 1020805670}
 --- !u!61 &742882657
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8252,6 +8259,7 @@ MonoBehaviour:
   tasks: {fileID: 210085781}
   "\u0441ameraUpgread": {fileID: 121570939}
   cameraFollower: {fileID: 121570938}
+  catMovement: {fileID: 19213736}
 --- !u!61 &760486480
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9034,6 +9042,7 @@ MonoBehaviour:
   speedInAir: 3
   jumpForce: 0.05
   IsMove: 0
+  direction: 0
   player: {fileID: 1504887556}
   onGroundCheck: {fileID: 1469415167}
   visionZone: {fileID: 1404402131}
@@ -9071,7 +9080,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: 0, y: -0.17}
   m_Size: {x: 1, y: 0.65}
   m_Direction: 1
 --- !u!50 &815505375
@@ -9275,7 +9284,7 @@ GameObject:
   - component: {fileID: 852590520}
   m_Layer: 0
   m_Name: RedHouse3
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9847,6 +9856,7 @@ MonoBehaviour:
   tasks: {fileID: 210085781}
   "\u0441ameraUpgread": {fileID: 121570939}
   cameraFollower: {fileID: 121570938}
+  catMovement: {fileID: 815505373}
 --- !u!1 &901942785
 GameObject:
   m_ObjectHideFlags: 0
@@ -10358,6 +10368,7 @@ MonoBehaviour:
   speedInAir: 3
   jumpForce: 0.05
   IsMove: 0
+  direction: 0
   player: {fileID: 1504887556}
   onGroundCheck: {fileID: 1588610681}
   visionZone: {fileID: 35171545}
@@ -10395,7 +10406,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: 0, y: -0.17}
   m_Size: {x: 1, y: 0.65}
   m_Direction: 1
 --- !u!50 &948426063
@@ -10571,6 +10582,7 @@ MonoBehaviour:
   tasks: {fileID: 210085781}
   "\u0441ameraUpgread": {fileID: 121570939}
   cameraFollower: {fileID: 121570938}
+  catMovement: {fileID: 1615089947}
 --- !u!61 &959990905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10685,7 +10697,7 @@ GameObject:
   - component: {fileID: 963314814}
   m_Layer: 0
   m_Name: GreenHouse1
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11011,6 +11023,7 @@ MonoBehaviour:
   speedInAir: 3
   jumpForce: 0.05
   IsMove: 0
+  direction: 0
   player: {fileID: 1504887556}
   onGroundCheck: {fileID: 543097130}
   visionZone: {fileID: 1027489338}
@@ -11048,7 +11061,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: 0, y: -0.17}
   m_Size: {x: 1, y: 0.65}
   m_Direction: 1
 --- !u!50 &1020805672
@@ -19017,7 +19030,7 @@ GameObject:
   - component: {fileID: 1147033007}
   m_Layer: 0
   m_Name: GreenHouse2
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19726,7 +19739,7 @@ GameObject:
   - component: {fileID: 1153706110}
   m_Layer: 0
   m_Name: YellowHouse1
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20837,6 +20850,7 @@ MonoBehaviour:
   tasks: {fileID: 210085781}
   "\u0441ameraUpgread": {fileID: 121570939}
   cameraFollower: {fileID: 121570938}
+  catMovement: {fileID: 580470776}
 --- !u!61 &1293770451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21517,6 +21531,7 @@ MonoBehaviour:
   speedInAir: 3
   jumpForce: 0.05
   IsMove: 0
+  direction: 0
   player: {fileID: 1504887556}
   onGroundCheck: {fileID: 354264111}
   visionZone: {fileID: 1590967155}
@@ -21554,7 +21569,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: 0, y: -0.17}
   m_Size: {x: 1, y: 0.65}
   m_Direction: 1
 --- !u!50 &1393281262
@@ -21778,7 +21793,7 @@ GameObject:
   - component: {fileID: 1404061899}
   m_Layer: 0
   m_Name: BlueHouse1
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22677,7 +22692,7 @@ GameObject:
   - component: {fileID: 1431733927}
   m_Layer: 0
   m_Name: RedHouse4
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24434,6 +24449,7 @@ MonoBehaviour:
   speedInAir: 3
   jumpForce: 0.05
   IsMove: 0
+  direction: 0
   player: {fileID: 1504887556}
   onGroundCheck: {fileID: 1821125571}
   visionZone: {fileID: 944390770}
@@ -24471,7 +24487,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: 0, y: -0.17}
   m_Size: {x: 1, y: 0.65}
   m_Direction: 1
 --- !u!50 &1615089949
@@ -25161,6 +25177,7 @@ MonoBehaviour:
   tasks: {fileID: 210085781}
   "\u0441ameraUpgread": {fileID: 121570939}
   cameraFollower: {fileID: 121570938}
+  catMovement: {fileID: 1393281260}
 --- !u!61 &1677514933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25460,6 +25477,7 @@ MonoBehaviour:
   tasks: {fileID: 210085781}
   "\u0441ameraUpgread": {fileID: 121570939}
   cameraFollower: {fileID: 121570938}
+  catMovement: {fileID: 948426061}
 --- !u!61 &1696618985
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25848,6 +25866,7 @@ MonoBehaviour:
   tasks: {fileID: 210085781}
   "\u0441ameraUpgread": {fileID: 121570939}
   cameraFollower: {fileID: 121570938}
+  catMovement: {fileID: 612623187}
 --- !u!1 &1704012558
 GameObject:
   m_ObjectHideFlags: 0
@@ -26622,6 +26641,7 @@ MonoBehaviour:
   tasks: {fileID: 210085781}
   "\u0441ameraUpgread": {fileID: 121570939}
   cameraFollower: {fileID: 121570938}
+  catMovement: {fileID: 551742784}
 --- !u!1 &1820283101
 GameObject:
   m_ObjectHideFlags: 0
@@ -29492,7 +29512,7 @@ GameObject:
   - component: {fileID: 2140197463}
   m_Layer: 0
   m_Name: BrounHouse1
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

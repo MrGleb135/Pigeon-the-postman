@@ -11,7 +11,7 @@ public class CatMovement : MonoBehaviour
 
     float stayTime = 0f;
     float moveTime = 0f;
-    int direction = 0;
+    public int direction = 0;
 
     public GameObject player;
 

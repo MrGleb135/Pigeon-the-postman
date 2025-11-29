@@ -9,6 +9,7 @@ TagManager:
   - VisionZone
   - DeadZone
   - AdrenalineZone
+  - Building
   layers:
   - Default
   - TransparentFX
