@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - House
+  - Ground
+  - VisionZone
+  - DeadZone
+  - AdrenalineZone
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,7 @@ public class OnGroundCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("House"))
+        if (collision.CompareTag("House") || collision.CompareTag("VisionZone") || collision.CompareTag("DeadZone") || collision.CompareTag("AdrenalineZone"))
             return;
 
         OnGround = true;
@@ -23,7 +23,7 @@ public class OnGroundCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("House"))
+        if (collision.CompareTag("House") || collision.CompareTag("VisionZone") || collision.CompareTag("DeadZone") || collision.CompareTag("AdrenalineZone"))
             return;
             
         if (offGroundCoroutine == null)

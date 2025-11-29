@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class LettersManager : MonoBehaviour
 {
+    public EnergyCount energyCount;
     public LettersCount lettersCount;
+    public AdrenalineCount adrenalineCount;
+
     public GameObject task;
 
     [Header("Список всех домов")]
@@ -15,7 +18,9 @@ public class LettersManager : MonoBehaviour
     public void StartGame()
     {
         SelectRandomHouses();
+        energyCount.energy = energyCount.maxEnergy;
         lettersCount.letters = lettersCount.maxLetters;
+        adrenalineCount.adrenaline = adrenalineCount.maxAdrenaline;
         task.SetActive(true);
     }
 
