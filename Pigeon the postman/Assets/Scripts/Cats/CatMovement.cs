@@ -6,7 +6,7 @@ public class CatMovement : MonoBehaviour
 {
     public float speed = 2f;
     public float speedInAir = 3f;   
-    public float jumpForce = 0.5f;
+    public float jumpForce = 0.05f;
     public bool IsMove = false;
 
     float stayTime = 0f;
