@@ -9,6 +9,10 @@ public class CatMovement : MonoBehaviour
     public float jumpForce = 0.5f;
     public bool IsMove = false;
 
+    float stayTime = 0f;
+    float moveTime = 0f;
+    int direction = 0;
+
     public GameObject player;
 
     public OnGroundCheckForCats onGroundCheck;
@@ -48,9 +52,28 @@ public class CatMovement : MonoBehaviour
                 anim.SetTrigger("IsJump");
             }*/
         }
+
         if (!catSeePlayer)
         {
-            IsMove = false;
+            if (moveTime <= 0 && stayTime <= 0)
+            {
+                moveTime = Random.Range(1f, 3f);
+                stayTime = Random.Range(1f, 3f);
+                direction = Random.Range(0, 2) == 0 ? -1 : 1;
+            }
+
+            if (moveTime > 0)
+            {
+                moveTime -= Time.deltaTime;
+                transform.position += new Vector3(direction, 0, 0) * speed * Time.deltaTime;
+                sr.flipX = direction < 0;
+                IsMove = true;
+            }
+            else if (stayTime > 0)
+            {
+                stayTime -= Time.deltaTime;
+                IsMove = false;
+            }
         }
 
         anim.SetBool("IsMove", IsMove);
