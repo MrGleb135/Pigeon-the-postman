@@ -6,6 +6,7 @@ public class MusicVolume : MonoBehaviour
 {
     public AudioSource musicSource;
 
+    public GameObject canvas;
     public Slider slider;
     public TextMeshProUGUI volumeText;
 
@@ -20,10 +21,12 @@ public class MusicVolume : MonoBehaviour
             instance = this;
             transform.SetParent(null);
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(canvas);
         }
         else
         {
             Destroy(gameObject);
+            Destroy(canvas);
         }
     }
 

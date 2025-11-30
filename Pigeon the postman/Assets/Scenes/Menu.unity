@@ -2023,6 +2023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1227079940}
+  canvas: {fileID: 973551796}
   slider: {fileID: 1751956408}
   volumeText: {fileID: 2101725310}
   musicVolumeSave: 0
@@ -3400,6 +3401,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: caf04f0be8278944c91519fea5792703, type: 3}
   - {fileID: 8300000, guid: f75e996f8f07d744cba671cfb28603bc, type: 3}
   - {fileID: 8300000, guid: 5fc12755f3e0f09478b6c314624d6e3a, type: 3}
+  canvas: {fileID: 973551796}
   slider: {fileID: 1226762555}
   volumeText: {fileID: 1669310319}
   soundVolumeSave: 0

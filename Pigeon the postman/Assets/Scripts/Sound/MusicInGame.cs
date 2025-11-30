@@ -14,7 +14,7 @@ public class MusicInGame : MonoBehaviour
         {
             // Устанавливаем начальное значение слайдера и текста
             slider.SetValueWithoutNotify(MusicVolume.instance.musicVolumeSave);
-            volumeText.text = Mathf.RoundToInt(MusicVolume.instance.musicVolumeSave * 100).ToString() + " %";
+            UpdateVolumeText(MusicVolume.instance.musicVolumeSave);
 
             slider.onValueChanged.AddListener(SetVolume);
         }
@@ -24,9 +24,29 @@ public class MusicInGame : MonoBehaviour
     {
         if (MusicVolume.instance != null)
         {
-            // Меняем громкость на глобальном объекте музыки
-            MusicVolume.instance.SetVolume(value);
-            volumeText.text = Mathf.RoundToInt(value * 100).ToString() + " %";
+            // Меняем громкость музыки
+            MusicVolume.instance.musicSource.volume = value;
+            MusicVolume.instance.musicVolumeSave = value;
+
+            // Обновляем UI первой сцены, если слайдер и текст существуют
+            if (MusicVolume.instance.slider != null)
+            {
+                MusicVolume.instance.slider.SetValueWithoutNotify(value);
+            }
+            if (MusicVolume.instance.volumeText != null)
+            {
+                MusicVolume.instance.volumeText.text = Mathf.RoundToInt(value * 100).ToString() + " %";
+            }
+
+            PlayerPrefs.SetFloat("MusicVolumeSave", value);
+            PlayerPrefs.Save();
+
+            UpdateVolumeText(value);
         }
+    }
+
+    void UpdateVolumeText(float value)
+    {
+        volumeText.text = Mathf.RoundToInt(value * 100).ToString() + " %";
     }
 }

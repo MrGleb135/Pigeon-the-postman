@@ -7,6 +7,7 @@ public class SoundVolume : MonoBehaviour
     public AudioSource soundSource;
     public AudioClip[] soundClips;
 
+    public GameObject canvas;
     public Slider slider;
     public TextMeshProUGUI volumeText;
 
@@ -21,10 +22,12 @@ public class SoundVolume : MonoBehaviour
             instance = this;
             transform.SetParent(null);
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(canvas);
         }
         else
         {
             Destroy(gameObject);
+            Destroy(canvas);
         }
     }
     
@@ -33,6 +36,10 @@ public class SoundVolume : MonoBehaviour
         if (PlayerPrefs.HasKey("SoundVolumeSave"))
         {
             soundVolumeSave = PlayerPrefs.GetFloat("SoundVolumeSave");
+        }
+        else
+        {
+            soundVolumeSave = 1f;
         }
 
         slider.value = soundVolumeSave;
