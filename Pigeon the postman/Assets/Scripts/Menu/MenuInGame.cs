@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class MenuInGame : MonoBehaviour
 {
+    public GameObject endGameGood;
+    public GameObject endGameBad;
+
     public GameObject MIG;
     private bool active;
     void Start()
@@ -10,17 +13,20 @@ public class MenuInGame : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if(!endGameGood.activeSelf && !endGameBad.activeSelf)
         {
-            if (!active)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                MIG.SetActive(true);
-                active = true;
-            }
-            else
-            {
-                MIG.SetActive(false);
-                active = false;
+                if (!active)
+                {
+                    MIG.SetActive(true);
+                    active = true;
+                }
+                else
+                {
+                    MIG.SetActive(false);
+                    active = false;
+                }
             }
         }
     }

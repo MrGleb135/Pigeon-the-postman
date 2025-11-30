@@ -97,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 energyCount.energy = energyCount.energy - 10;
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                SoundVolume.instance.PlayRandomSound();
             }
 
             if (isRace)

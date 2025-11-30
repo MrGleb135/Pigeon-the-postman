@@ -18,6 +18,7 @@ MonoBehaviour:
     - 7b3dbf8d931faf94bb8ab36a053d4593
     - 0220aab0833d04faeb927d84ca6cc40c
     - f8ffef25eb357af449271f79749d1e6a
+    - bee97c2beb3a41d438acb73cc0a976a4
     values:
     - colorIndex: 0
       iconNameOrGuid: Material Icon
@@ -27,3 +28,5 @@ MonoBehaviour:
       iconNameOrGuid: SceneAsset Icon
     - colorIndex: 0
       iconNameOrGuid: SceneAsset Icon
+    - colorIndex: 0
+      iconNameOrGuid: AudioSource Icon

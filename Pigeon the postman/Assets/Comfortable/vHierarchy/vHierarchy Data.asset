@@ -25,6 +25,10 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-973551796-0
         - globalObjectIdString: GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-1143187111-0
         - globalObjectIdString: GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-150981829-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-1443138187-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-1420161138-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-1227079938-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-1917550816-0
         values:
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
@@ -36,6 +40,14 @@ MonoBehaviour:
           iconNameOrGuid: StandaloneInputModule Icon
         - colorIndex: 0
           iconNameOrGuid: StandaloneInputModule Icon
+        - colorIndex: 0
+          iconNameOrGuid: AudioSource Icon
+        - colorIndex: 0
+          iconNameOrGuid: AudioClip Icon
+        - colorIndex: 0
+          iconNameOrGuid: AudioClip Icon
+        - colorIndex: 0
+          iconNameOrGuid: AudioSource Icon
     - goDatas_byGlobalId:
         keys:
         - globalObjectIdString: GlobalObjectId_V1-2-2cda990e2423bbf4892e6590ba056729-519420028-0
@@ -62,6 +74,8 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-1147033004-0
         - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-482658118-0
         - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-648010657-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-488725733-0
+        - globalObjectIdString: GlobalObjectId_V1-2-ea531f0f1b9a96045be5261e387b0b1e-1540379724-0
         values:
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
@@ -99,3 +113,7 @@ MonoBehaviour:
           iconNameOrGuid: Terrain Icon
         - colorIndex: 0
           iconNameOrGuid: Terrain Icon
+        - colorIndex: 0
+          iconNameOrGuid: AudioListener Icon
+        - colorIndex: 0
+          iconNameOrGuid: AudioSource Icon
