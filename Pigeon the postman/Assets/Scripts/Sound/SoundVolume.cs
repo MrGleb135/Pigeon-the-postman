@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class SoundVolume : MonoBehaviour
@@ -13,8 +14,10 @@ public class SoundVolume : MonoBehaviour
 
     public float soundVolumeSave;
 
-    // Позволяет музыке играть на всех сценах
+    // Позволяет сохранять один экземпляр скрипта между сценами
     public static SoundVolume instance;
+
+    // Делам объект музыки неуничтожаемыми при смене сцен
     void Awake()
     {
         if (instance == null)
@@ -46,14 +49,23 @@ public class SoundVolume : MonoBehaviour
         soundSource.volume = soundVolumeSave;
         volumeText.text = Mathf.RoundToInt(soundVolumeSave * 100).ToString() + " %";
 
-        slider.onValueChanged.AddListener(SetVolume); //вызывает SetVolume при изменении значения слайдера
+        slider.onValueChanged.AddListener(SetVolume); // Вызывает SetVolume при изменении значения слайдера
     }
 
     void Update()
     {
-        
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (sceneIndex == 0)
+        {
+            canvas.SetActive(true);
+        }
+        else
+        {
+            canvas.SetActive(false);
+        }
     }
 
+    // Вызывается при изменении значения слайдера
     public void SetVolume(float volume)
     {
         soundVolumeSave = volume;
@@ -64,6 +76,7 @@ public class SoundVolume : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    // Проигрывает случайный звук
     public void PlayRandomSound()
     {
         int index = Random.Range(0, soundClips.Length);

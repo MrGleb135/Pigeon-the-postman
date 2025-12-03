@@ -25,8 +25,10 @@ public class TargetPoint : MonoBehaviour
 
     void Update()
     {
+        // Обновляем список выбранных домов из менеджера писем
         selectedHouses = lettersManager.selectedHouses;
 
+        // Вычисляем границы видимой области камеры
         Camera cam = Camera.main;
         Vector3 bottomLeft = cam.ViewportToWorldPoint(new Vector3(0, 0, cam.nearClipPlane));
         Vector3 topRight = cam.ViewportToWorldPoint(new Vector3(1, 1, cam.nearClipPlane));
@@ -41,6 +43,7 @@ public class TargetPoint : MonoBehaviour
             task1.SetActive(false);
             task2.SetActive(true);
 
+            // Проверяем, видна ли голубятня на экране
             Vector2 devecotePosition = devecote.transform.position;
             if (devecotePosition.x > left && devecotePosition.x < right && devecotePosition.y < top && devecotePosition.y > bottom)
             {
@@ -58,11 +61,14 @@ public class TargetPoint : MonoBehaviour
             task2.SetActive(false);
 
             FindNearestHouse();
+            // Если целей нет, скрываем маркер
             if (target == null)
             {
                 marker.SetActive(false);
                 return;
             }
+
+            // Проверяем, видна ли текущая цель на экране
             Vector2 targetPosition = target.transform.position;
             if (targetPosition.x > left && targetPosition.x < right && targetPosition.y < top && targetPosition.y > bottom)
             {
@@ -76,9 +82,10 @@ public class TargetPoint : MonoBehaviour
         }
     }
 
+    // Нахождение ближайшего дома к игроку
     void FindNearestHouse()
     {
-        float minDistance = float.MaxValue;
+        float minDistance = float.MaxValue; // Начальная "бесконечно большая" дистанция
         LettersData nearestHouse = null;
 
         Vector2 playerPosition = pigeon.transform.position;
@@ -87,8 +94,10 @@ public class TargetPoint : MonoBehaviour
         {
             LettersData houseData = selectedHouses[i];
 
+            // Вычисляем дистанцию от игрока до дома
             float dist = Vector2.Distance(playerPosition, houseData.house.transform.position);
 
+            // Если расстояние меньше текущего минимума, обновляем ближайший дом
             if (dist < minDistance)
             {
                 minDistance = dist;
@@ -96,6 +105,7 @@ public class TargetPoint : MonoBehaviour
             }
         }
 
+        // Устанавливаем цель на ближайший дом
         if (nearestHouse != null)
         {
             target = nearestHouse.house;
@@ -106,6 +116,7 @@ public class TargetPoint : MonoBehaviour
         }
     }
 
+    // Размещение маркера на экране, указывающего на цель
     void PlaceMarker(GameObject targetObject)
     {
         Camera cam = Camera.main;
@@ -122,8 +133,10 @@ public class TargetPoint : MonoBehaviour
         Vector3 worldPos = cam.ViewportToWorldPoint(viewportPos);
         worldPos.z = 0f;
 
+        // Устанавливаем позицию маркера
         marker.transform.position = worldPos;
 
+        // Вычисляем направление от игрока к цели для поворота маркера
         Vector2 direction = targetPos - playerPosition;
         float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) + 90f;
         marker.transform.rotation = Quaternion.Euler(0, 0, angle);

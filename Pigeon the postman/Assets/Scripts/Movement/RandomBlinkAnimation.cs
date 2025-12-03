@@ -8,17 +8,20 @@ public class RandomBlinkAnimation : MonoBehaviour
     int previousLoopCount = -1;
     bool isBlinking = false;
 
+    // Установка случайного числа циклов до следующего моргания
     void SetNextBlink()
     {
         nextBlinkAfter = Random.Range(3, 6);
     }
+
     void Start()
     {
-        anim = GetComponent<Animator>();
-        SetNextBlink();
+        anim = GetComponent<Animator>(); // Получаем Animator на объекте
+        SetNextBlink(); // Задаём первое случайное моргание
     }
     void Update()
     {
+        // Получаем информацию о текущем состоянии анимации
         AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
 
         if (isBlinking)
@@ -34,6 +37,7 @@ public class RandomBlinkAnimation : MonoBehaviour
         
         if (state.IsName("PigionStayAnimation"))
         {
+            // normalizedTime - количество пройденных полных циклов анимации
             int currentLoopCount = (int)state.normalizedTime;
 
             if (currentLoopCount > previousLoopCount)

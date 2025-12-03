@@ -32,9 +32,11 @@ public class EnergyCount : MonoBehaviour
             energyCoroutine = null;
         }
 
+        // Заполняем шкалу пропорционально текущей энергии
         EnergyScale.fillAmount = ((1/(float)maxEnergy)*(float)energy);
     }
 
+    // Корутина восстановления энергии каждые 0.1 секунды, после 3 секунд на земле
     private IEnumerator WaitForEnergy()
     {
         yield return new WaitForSeconds(1.5f);

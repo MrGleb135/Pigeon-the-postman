@@ -26,6 +26,7 @@ public class OnGroundCheckForCats : MonoBehaviour
         }
     }
 
+    // Корутина, чтобы установить OnGround в false после 0.1 секунды
     private IEnumerator OffGroundTimer()
     {
         yield return new WaitForSeconds(offGroundDelay);

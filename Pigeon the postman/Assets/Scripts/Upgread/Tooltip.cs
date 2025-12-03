@@ -20,6 +20,7 @@ public class Tooltip : MonoBehaviour
         tooltip.SetActive(false);
     }
 
+    // Обновляет информацию в tooltip
     void Update()
     {
         switch (upgreadID)
@@ -102,11 +103,13 @@ public class Tooltip : MonoBehaviour
         }
     }
 
+    // Показывает tooltip при наведении мыши
     void OnMouseEnter()
     {
         tooltip.SetActive(true);
     }
 
+    // Скрывает tooltip при уходе мыши
     void OnMouseExit()
     {
         tooltip.SetActive(false);

@@ -6,6 +6,7 @@ public class PrintSelectedHouses : MonoBehaviour
     public LettersManager lettersManager;
     public Text housesText;
 
+    // Проходит по всев выбранным домам из заносит их номера в текстовое поле
     void Update()
     {
         housesText.text = "";

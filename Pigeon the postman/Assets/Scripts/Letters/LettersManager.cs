@@ -24,14 +24,18 @@ public class LettersManager : MonoBehaviour
         task.SetActive(true);
     }
 
+    // Выбирает случайные дома из общего списка
     public void SelectRandomHouses()
     {
         selectedHouses.Clear();
 
+        // Определяем количество домов для выбора, ограничивая максимумом писем и общим числом домов
         int count = Mathf.Clamp(lettersCount.maxLetters, 0, houses.Count);
 
+        // Создаем временный список для выбранных домов
         List<LettersData> temp = new List<LettersData>(houses);
 
+        // Выбираем случайные дома
         for (int i = 0; i < count; i++)
         {
             int rand = Random.Range(0, temp.Count);

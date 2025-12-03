@@ -10,7 +10,7 @@ public class OnGroundCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("House") || collision.CompareTag("VisionZone") || collision.CompareTag("DeadZone") || collision.CompareTag("AdrenalineZone"))
+        if (collision.CompareTag("House") || collision.CompareTag("VisionZone") || collision.CompareTag("DeadZone") || collision.CompareTag("AdrenalineZone")) // Не считает коллизии с этими тегами
             return;
 
         OnGround = true;
@@ -23,7 +23,7 @@ public class OnGroundCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("House") || collision.CompareTag("VisionZone") || collision.CompareTag("DeadZone") || collision.CompareTag("AdrenalineZone"))
+        if (collision.CompareTag("House") || collision.CompareTag("VisionZone") || collision.CompareTag("DeadZone") || collision.CompareTag("AdrenalineZone")) // Не считает коллизии с этими тегами
             return;
             
         if (offGroundCoroutine == null)
@@ -32,6 +32,7 @@ public class OnGroundCheck : MonoBehaviour
         }
     }
 
+    // Корутина, чтобы установить OnGround в false после 0.1 секунды
     private IEnumerator OffGroundTimer()
     {
         yield return new WaitForSeconds(offGroundDelay);

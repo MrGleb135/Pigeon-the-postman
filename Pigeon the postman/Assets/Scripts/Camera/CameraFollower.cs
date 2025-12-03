@@ -14,18 +14,21 @@ public class CameraFollower : MonoBehaviour
 
     void LateUpdate()
     {
-        bool isUpgreadMenu = сameraUpgread.upgreadMenu;
+        bool isUpgreadMenu = сameraUpgread.upgreadMenu; // isUpgreadMenu - нужно для остановки камеры, чтобы она не переменщалась во время апгрейда
         if (!isUpgreadMenu)
         {
             bool isGrounded = OnGround.OnGround;
 
             Vector3 CameraPosition = new Vector3(player.position.x + offset.x, player.position.y + offset.y, transform.position.z);
 
+            // Коэффициент сглаживания движения
             float moveLerpFactor = 1f - Mathf.Exp(-moveSmooth * Time.deltaTime);
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, CameraPosition, moveLerpFactor);
 
+             // Применяем сглаженное движение
             transform.position = smoothedPosition;
 
+            // Коэффициент сглаживания изменения зума
             float targetZoom = isGrounded ? groundZoom : airZoom;
             float zoomLerpFactor = 1f - Mathf.Exp(-zoomSmooth * Time.deltaTime);
 

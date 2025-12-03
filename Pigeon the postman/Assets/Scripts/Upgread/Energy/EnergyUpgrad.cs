@@ -45,6 +45,7 @@ public class EnergyUpgrad : MonoBehaviour
         }
     }
 
+    // Улучшение до 125 энергии
     public void EnergyUpgrad125()
     {
         if (marcs.marcs >= 5)
@@ -65,6 +66,8 @@ public class EnergyUpgrad : MonoBehaviour
             Button150.SetActive(true);
         }
     }
+
+    // Улучшение до 150 энергии
     public void EnergyUpgrad150()
     {
         if (marcs.marcs >= 10)
@@ -76,7 +79,7 @@ public class EnergyUpgrad : MonoBehaviour
             currentStep = 150;
             PlayerPrefs.SetInt("EnergyUpgradeStep", currentStep);
 
-            marcs.marcs = marcs.marcs - 5;
+            marcs.marcs = marcs.marcs - 10;
             PlayerPrefs.SetInt("MarcsCount", marcs.marcs);
 
             PlayerPrefs.Save();
@@ -85,6 +88,8 @@ public class EnergyUpgrad : MonoBehaviour
             Button175.SetActive(true);
         }
     }   
+
+    // Улучшение до 175 энергии
     public void EnergyUpgrad175()
     {
         if (marcs.marcs >= 15)
@@ -96,7 +101,7 @@ public class EnergyUpgrad : MonoBehaviour
             currentStep = 175;
             PlayerPrefs.SetInt("EnergyUpgradeStep", currentStep);
 
-            marcs.marcs = marcs.marcs - 5;
+            marcs.marcs = marcs.marcs - 15;
             PlayerPrefs.SetInt("MarcsCount", marcs.marcs);
 
             PlayerPrefs.Save();
@@ -105,6 +110,8 @@ public class EnergyUpgrad : MonoBehaviour
             Button200.SetActive(true);
         }
     }
+
+    // Улучшение до 200 энергии
     public void EnergyUpgrad200()
     {
         if (marcs.marcs >= 20)
@@ -116,7 +123,7 @@ public class EnergyUpgrad : MonoBehaviour
             currentStep = 200;
             PlayerPrefs.SetInt("EnergyUpgradeStep", currentStep);
 
-            marcs.marcs = marcs.marcs - 5;
+            marcs.marcs = marcs.marcs - 20;
             PlayerPrefs.SetInt("MarcsCount", marcs.marcs);
 
             PlayerPrefs.Save();
@@ -126,6 +133,7 @@ public class EnergyUpgrad : MonoBehaviour
         }
     }
 
+    // Сброс кнопок
     public void ResetButtons()
     {
         Button125.SetActive(false);

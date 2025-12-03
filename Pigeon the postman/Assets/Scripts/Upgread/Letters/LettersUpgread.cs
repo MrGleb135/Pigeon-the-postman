@@ -45,6 +45,7 @@ public class LettersUpgread : MonoBehaviour
         }
     }
     
+    // Улучшение до 2 писем
     public void LettersUpgrad1()
     {
         if (marcs.marcs >= 5)
@@ -65,6 +66,8 @@ public class LettersUpgread : MonoBehaviour
             Button3.SetActive(true);
         }
     }
+
+    // Улучшение до 3 писем
     public void LettersUpgrad2()
     {
         if (marcs.marcs >= 10)
@@ -76,7 +79,7 @@ public class LettersUpgread : MonoBehaviour
             currentStep = 2;
             PlayerPrefs.SetInt("LettersUpgradeStep", currentStep);
 
-            marcs.marcs = marcs.marcs - 5;
+            marcs.marcs = marcs.marcs - 10;
             PlayerPrefs.SetInt("MarcsCount", marcs.marcs);
 
             PlayerPrefs.Save();
@@ -85,6 +88,8 @@ public class LettersUpgread : MonoBehaviour
             Button4.SetActive(true);
         }
     }
+
+    // Улучшение до 4 писем
     public void LettersUpgrad3()
     {
         if (marcs.marcs >= 15)
@@ -96,7 +101,7 @@ public class LettersUpgread : MonoBehaviour
             currentStep = 3;
             PlayerPrefs.SetInt("LettersUpgradeStep", currentStep);
 
-            marcs.marcs = marcs.marcs - 5;
+            marcs.marcs = marcs.marcs - 15;
             PlayerPrefs.SetInt("MarcsCount", marcs.marcs);
 
             PlayerPrefs.Save();
@@ -105,6 +110,8 @@ public class LettersUpgread : MonoBehaviour
             Button5.SetActive(true);
         }
     }
+
+    // Улучшение до 5 писем
     public void LettersUpgrad4()
     {
         if (marcs.marcs >= 20)
@@ -116,7 +123,7 @@ public class LettersUpgread : MonoBehaviour
             currentStep = 4;
             PlayerPrefs.SetInt("LettersUpgradeStep", currentStep);
 
-            marcs.marcs = marcs.marcs - 5;
+            marcs.marcs = marcs.marcs - 20;
             PlayerPrefs.SetInt("MarcsCount", marcs.marcs);
 
             PlayerPrefs.Save();
@@ -126,6 +133,7 @@ public class LettersUpgread : MonoBehaviour
         }
     } 
     
+    // Сброс кнопок
     public void ResetButtons()
     {
         Button2.SetActive(false);

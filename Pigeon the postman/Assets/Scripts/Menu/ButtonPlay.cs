@@ -7,6 +7,7 @@ public class ButtonPlay : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    
     public void ButtonMenuActive()
     {
         SceneManager.LoadScene(0);

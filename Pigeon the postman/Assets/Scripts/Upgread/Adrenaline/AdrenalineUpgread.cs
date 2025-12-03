@@ -45,6 +45,7 @@ public class AdrenalineUpgread : MonoBehaviour
         }
     }
     
+    // Улучшение до 1 адреналина
     public void AdrenalineUpgrad1()
     {
         if (marcs.marcs >= 5)
@@ -65,6 +66,8 @@ public class AdrenalineUpgread : MonoBehaviour
             Button2.SetActive(true);
         }
     }
+
+    // Улучшение до 2 адреналинов
     public void AdrenalineUpgrad2()
     {
         if (marcs.marcs >= 10)
@@ -76,7 +79,7 @@ public class AdrenalineUpgread : MonoBehaviour
             currentStep = 2;
             PlayerPrefs.SetInt("AdrenalineUpgradeStep", currentStep);
 
-            marcs.marcs = marcs.marcs - 5;
+            marcs.marcs = marcs.marcs - 10;
             PlayerPrefs.SetInt("MarcsCount", marcs.marcs);
 
             PlayerPrefs.Save();
@@ -85,6 +88,8 @@ public class AdrenalineUpgread : MonoBehaviour
             Button3.SetActive(true);
         }
     }
+
+    // Улучшение до 3 адреналинов
     public void AdrenalineUpgrad3()
     {
         if (marcs.marcs >= 15)
@@ -96,7 +101,7 @@ public class AdrenalineUpgread : MonoBehaviour
             currentStep = 3;
             PlayerPrefs.SetInt("AdrenalineUpgradeStep", currentStep);
 
-            marcs.marcs = marcs.marcs - 5;
+            marcs.marcs = marcs.marcs - 15;
             PlayerPrefs.SetInt("MarcsCount", marcs.marcs);
 
             PlayerPrefs.Save();
@@ -105,6 +110,8 @@ public class AdrenalineUpgread : MonoBehaviour
             Button4.SetActive(true);
         }
     }
+
+    // Улучшение до 4 адреналинов
     public void AdrenalineUpgrad4()
     {
         if (marcs.marcs >= 20)
@@ -116,7 +123,7 @@ public class AdrenalineUpgread : MonoBehaviour
             currentStep = 4;
             PlayerPrefs.SetInt("AdrenalineUpgradeStep", currentStep);
 
-            marcs.marcs = marcs.marcs - 5;
+            marcs.marcs = marcs.marcs - 20;
             PlayerPrefs.SetInt("MarcsCount", marcs.marcs);
 
             PlayerPrefs.Save();
@@ -126,6 +133,7 @@ public class AdrenalineUpgread : MonoBehaviour
         }
     }
     
+    // Сброс кнопок
     public void ResetButtons()
     {
         Button1.SetActive(false);

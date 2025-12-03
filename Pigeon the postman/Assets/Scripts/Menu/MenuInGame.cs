@@ -7,10 +7,12 @@ public class MenuInGame : MonoBehaviour
 
     public GameObject MIG;
     private bool active;
+
     void Start()
     {
         MIG.SetActive(false);
     }
+
     void Update()
     {
         if(!endGameGood.activeSelf && !endGameBad.activeSelf)
@@ -30,6 +32,7 @@ public class MenuInGame : MonoBehaviour
             }
         }
     }
+    
     public void ButtonContinue()
     {
         MIG.SetActive(false);
